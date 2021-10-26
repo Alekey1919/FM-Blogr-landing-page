@@ -3,10 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
-  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
+}
+header,
+main,
+#section-0,
+#section-2,
+#footer {
   overflow-x: hidden;
 }
 
@@ -397,7 +403,6 @@ i {
   }
 
   .nav-mobile-container {
-    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -431,7 +436,7 @@ i {
   }
 
   .nav-mobile {
-    margin-top: 250px;
+    margin-top: 200px;
     color: white;
   }
 
@@ -457,7 +462,8 @@ i {
 
   .nav-mobile-buttons {
     display: flex;
-    flex-direction: column;
+    margin: 0 !important;
+    justify-content: space-around;
   }
 
   .login,
@@ -502,12 +508,18 @@ i {
 
   .section-0-text > div {
     width: 100%;
-    /* background: cyan; */
     padding: 0;
     position: relative;
     left: 0;
     margin: 25px 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-0-text > div > p {
+    width: 80%;
+    margin: 20px auto;
   }
 }
 
@@ -552,6 +564,15 @@ i {
   .section-1-text > p {
     color: rgba(255, 255, 255, 0.534);
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section-1-text {
+    width: 80%;
+    display: flex;
+    margin: 100px 200px 0 200px;
+    text-align: center;
   }
 }
 

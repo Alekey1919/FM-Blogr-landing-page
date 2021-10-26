@@ -49,11 +49,15 @@ contact.addEventListener("click", () => {
 // MOBILE NAVBAR
 
 const mobileOpen = document.getElementById("hamburguer");
+const mobileNav = document.querySelector(".nav-mobile-container");
 
 mobileOpen.addEventListener("click", () => {
-  document.querySelector(".nav-mobile-container").style.left = "0vw";
-  mobileClose.style.display = "block";
-  mobileClose.style.opacity = "1";
+  mobileNav.style.display = "block";
+  setTimeout(() => {
+    mobileNav.style.left = "0vw";
+    mobileClose.style.display = "block";
+    mobileClose.style.opacity = "1";
+  }, 10);
 });
 
 const mobileClose = document.getElementById("mobile-close");
@@ -63,6 +67,7 @@ mobileClose.addEventListener("click", () => {
   mobileClose.style.opacity = "0";
   setTimeout(() => {
     mobileClose.style.display = "none";
+    mobileNav.style.display = "none";
   }, 300);
 });
 
